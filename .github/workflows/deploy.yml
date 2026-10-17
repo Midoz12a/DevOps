@@ -1,5 +1,5 @@
 # name: Deploy react
-# on:
+#on:
 #   push:
 #     branches:
 #       - master
