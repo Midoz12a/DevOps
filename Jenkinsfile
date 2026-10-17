@@ -4,6 +4,7 @@ pipeline{
     }
 
     stages{
+
         stage('Build docker image  '){
             steps{
                 script{
@@ -13,14 +14,15 @@ pipeline{
         
                 
         }
-    }
-    stage('Test'){
+    
+        stage('Test'){
         steps{
             script{
                 env.DOCKER_BUILD = 1
                 sh 'docker run my-image:latest npm test'
             }
         }
+      }
     }
     
     
