@@ -13,15 +13,15 @@ jobs:
       - run: docker build -t ahmedgamil/react-test -f Dockerfile.dev .
       - run: docker run -e CI=true ahmedgamil/react-test npm run test
       
-      - run: docker build -t Midoz/multi-client ./microservices/client
-      - run: docker build -t Midoz/multi-server ./microservices/server
-      - run: docker build -t Midoz/multi-nginx ./microservices/nginx
-      - run: docker build -t Midoz/multi-worker ./microservices/worker
+      - run: docker build -t midoz22/multi-client ./microservices/client
+      - run: docker build -t midoz22/multi-server ./microservices/server
+      - run: docker build -t midoz22/multi-nginx ./microservices/nginx
+      - run: docker build -t midoz22/multi-worker ./microservices/worker
 
-      - run: docker run Midoz/multi-client
-      - run: docker run Midoz/multi-server
-      - run: docker run Midoz/multi-nginx
-      - run: docker run Midoz/multi-worker 
+      - run: docker run midoz22/multi-client
+      - run: docker run midoz22/multi-server
+      - run: docker run midoz22/multi-nginx
+      - run: docker run midoz22/multi-worker 
 # .
 
       # - name: Generate deployment package
