@@ -22,7 +22,7 @@ jobs:
       - run: docker run Midoz/multi-server
       - run: docker run Midoz/multi-nginx
       - run: docker run Midoz/multi-worker 
-# .
+
       # - name: Generate deployment package
       #   run: zip -r deploy.zip . -x '*.git*'
 
